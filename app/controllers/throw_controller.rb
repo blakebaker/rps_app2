@@ -9,6 +9,9 @@ class ThrowController < ApplicationController
   
   end
 
+  def paper
+  end
+  
   def rock
   end
 
