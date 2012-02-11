@@ -1,4 +1,10 @@
 RpsApp::Application.routes.draw do
+  get "throw/paper"
+
+  get "throw/rock"
+
+  get "throw/scissors"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
