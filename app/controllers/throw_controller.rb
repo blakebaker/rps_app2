@@ -1,5 +1,12 @@
 class ThrowController < ApplicationController
-  def paper
+  before do
+	@defeat = {rock: :scissors, paper: :rock, scissors: :paper}
+	@throws = @defeat.keys
+  end
+  
+  def throw
+  
+  
   end
 
   def rock
