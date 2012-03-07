@@ -1,7 +1,7 @@
 RpsApp::Application.routes.draw do
-  get "stats/find"
+  get "throw/throwing"
 
-  get "thro/throwing"
+  get "stats/find"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ThroController do
+describe ThrowController do
 
   describe "GET 'throwing'" do
     it "should be successful" do
