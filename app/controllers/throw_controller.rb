@@ -24,11 +24,11 @@ class ThrowController < ApplicationController
 			session[:tie] ||= 0
 			session[:tie] = session[:tie] + 1
 		  elsif @computer_throw == @defeat[@player_throw]
-			@status = "You win"
+			@status = "Nicely done; #{@player_throw} beats #{@computer_throw}!"
 			session[:win] ||= 0
 			session[:win] = session[:win] + 1
 		  else
-			@status = "You lost"
+			@status = "Ouch; #{@computer_throw} beats #{@player_throw}. Better luck next time!"
 			session[:loss] ||= 0
 			session[:loss] = session[:win] + 1
 		  end
