@@ -11,7 +11,7 @@ class ThrowController < ApplicationController
 		  # in the case of a player providing a throw that is not valid,
 		  # we halt with a status code of 403 (Forbidden) and let them
 		  # know they need to make a valid throw to play.
-		  if !@throws.include?(player_throw)
+		  if !@throws.include?(throwing)
 			halt 403, "You must throw one of the following: #{@throws}"
 		  end
 
