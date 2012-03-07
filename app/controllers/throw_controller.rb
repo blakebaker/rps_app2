@@ -21,13 +21,13 @@ class ThrowController < ApplicationController
 		  # compare the player and computer throws to determine a winner
 		  if @player_throw == @computer_throw
 			@status = "You tied with the computer. Try again!"
-			session[:tie] += 1
+			session[:tie] = session[:tie] + 1
 		  elsif @computer_throw == @defeat[@player_throw]
 			@status = "You win"
-			session[:win] += 1
+			session[:win] = session[:win] + 1
 		  else
 			@status = "You lost"
-			session[:loss] += 1
+			session[:loss] = session[:win] + 1
 		  end
 	end
 end
