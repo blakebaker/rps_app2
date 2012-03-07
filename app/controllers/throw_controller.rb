@@ -23,10 +23,10 @@ class ThrowController < ApplicationController
 			@status = "You tied with the computer. Try again!"
 			session[:tie]+= 1
 		  elsif @computer_throw == @defeat[@player_throw]
-			@status = "Nicely done; #{@player_throw} beats #{@computer_throw}!"
+			@status = "You win"
 			session[:win]+= 1
 		  else
-			@status = "Ouch; #{@computer_throw} beats #{@player_throw}. Better luck next time!"
+			@status = "You lost"
 			session[:loss]+= 1
 		  end
 	end
