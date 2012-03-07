@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe StatsController do
-  describe "GET 'stats'" do
+
+  describe "GET 'find'" do
     it "should be successful" do
-      get 'stats'
+      get 'find'
       response.should be_success
     end
   end
-end
 
 end

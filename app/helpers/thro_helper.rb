@@ -1,0 +1,2 @@
+module ThroHelper
+end
