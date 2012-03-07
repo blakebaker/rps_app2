@@ -1,7 +1,4 @@
 RpsApp::Application.routes.draw do
-  get "throw/throwing"
-
-  get "stats/find"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -14,5 +11,5 @@ RpsApp::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
   match 'throw/:type' => 'throw#player_throw'
-  match 'stats/stats' => 'stats#stats'
+  match 'stats/find' => 'stats#dind'
 end
