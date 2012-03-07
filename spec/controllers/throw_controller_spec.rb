@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe ThrowController do
-  describe "GET 'player_throw'" do
+  describe "GET 'throwing'" do
     it "should be successful" do
-      get 'player_throw'
+      get 'throwing'
       response.should be_success
     end
   end

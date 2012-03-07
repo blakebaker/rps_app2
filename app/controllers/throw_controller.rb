@@ -4,7 +4,7 @@ class ThrowController < ApplicationController
 		@throws = @defeat.keys	
 	end
 	
-	get '/throw/:type' do
+	def throwing do
 		  # the params[] hash stores querystring and form data.
 		  @player_throw = params[:type].to_sym
 
@@ -21,10 +21,13 @@ class ThrowController < ApplicationController
 		  # compare the player and computer throws to determine a winner
 		  if @player_throw == @computer_throw
 			"You tied with the computer. Try again!"
+			session[:tie]+= 1
 		  elsif @computer_throw == @defeat[@player_throw]
 			"Nicely done; #{@player_throw} beats #{@computer_throw}!"
+			session[:win]+= 1
 		  else
 			"Ouch; #{@computer_throw} beats #{@player_throw}. Better luck next time!"
+			session[:loss]+= 1
 		  end
 	end
 end
