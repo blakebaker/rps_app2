@@ -11,7 +11,7 @@ class ThrowController < ApplicationController
 		  # in the case of a player providing a throw that is not valid,
 		  # we halt with a status code of 403 (Forbidden) and let them
 		  # know they need to make a valid throw to play.
-		  if !@throws.include?(throwing)
+		  if !@throws.include?(@player_throw)
 			halt 403, "You must throw one of the following: #{@throws}"
 		  end
 
@@ -21,13 +21,13 @@ class ThrowController < ApplicationController
 		  # compare the player and computer throws to determine a winner
 		  if @player_throw == @computer_throw
 			@status = "You tied with the computer. Try again!"
-			session[:tie]+= 1
+			session [:tie]+= 1
 		  elsif @computer_throw == @defeat[@player_throw]
 			@status = "You win"
-			session[:win]+= 1
+			session [:win]+= 1
 		  else
 			@status = "You lost"
-			session[:loss]+= 1
+			session [:loss]+= 1
 		  end
 	end
 end
