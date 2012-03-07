@@ -30,7 +30,7 @@ class ThrowController < ApplicationController
 		  else
 			@status = "Ouch; #{@computer_throw} beats #{@player_throw}. Better luck next time!"
 			session[:loss] ||= 0
-			session[:loss] = session[:win] + 1
+			session[:loss] = session[:loss] + 1
 		  end
 	end
 end

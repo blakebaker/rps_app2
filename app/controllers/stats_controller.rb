@@ -1,7 +1,7 @@
 class StatsController < ApplicationController
   def find
-	@win = session[:wins]
-	@lose = session[:lose]
+	@win = session[:win]
+	@lose = session[:loss]
 	@tie = session[:tie]
   end
 
